@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Deals Cameroon | Phones and Laptops</title>
-  <meta name="description" content="Buy phones and laptops in Cameroon. Fair prices, MTN MoMo and Orange Money, delivery in Douala, Yaounde and beyond.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Smart Deals Cameroun | Telephones et ordinateurs</title>
+  <meta name="description" content="Achetez telephones et ordinateurs au Cameroun. Prix justes, MTN MoMo et Orange Money, livraison a Douala, Yaounde et partout.">
   <link rel="icon" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Manrope:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" as="image" href="assets/images/hero-banner.webp">
 </head>
 <body>
   <div id="site-header"></div>
 
   <section class="hero">
-    <img class="hero-bg" src="assets/images/hero-banner.png" alt="">
+    <img class="hero-bg" src="assets/images/hero-banner.webp" alt="" fetchpriority="high" decoding="async" width="1600" height="900">
     <div class="hero-inner">
-      <span class="chip" data-i18n="heroBadge">New arrivals this week</span>
-      <p class="kicker" data-i18n="heroKicker">Cameroon electronics boutique</p>
-      <h1 data-i18n="heroTitle">Upgrade your tech. Keep more of your money.</h1>
-      <p class="lead" data-i18n="heroText">Official feel, street smart prices. iPhone, Samsung, Tecno, Infinix, HP, Dell and more. Pay with MTN MoMo or Orange Money.</p>
+      <span class="chip" data-i18n="heroBadge">Nouveautes de la semaine</span>
+      <p class="kicker" data-i18n="heroKicker">Boutique high tech Cameroun</p>
+      <h1 data-i18n="heroTitle">Passez au niveau superieur. Gardez plus d argent.</h1>
+      <p class="lead" data-i18n="heroText">Finition soignee, prix malins. iPhone, Samsung, Tecno, Infinix, HP, Dell et plus. Paiement MTN MoMo ou Orange Money.</p>
       <div class="hero-actions">
-        <a class="btn btn-gold" href="shop.html?cat=phones" data-i18n="shopPhones">Shop phones</a>
-        <a class="btn btn-ghost" href="shop.html?cat=laptops" data-i18n="shopLaptops">Shop laptops</a>
+        <a class="btn btn-gold" href="shop.html?cat=phones" data-i18n="shopPhones">Voir les telephones</a>
+        <a class="btn btn-ghost" href="shop.html?cat=laptops" data-i18n="shopLaptops">Voir les ordinateurs</a>
       </div>
     </div>
   </section>
@@ -29,18 +33,18 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker" style="color:#8a6a12" data-i18n="catsTitle">Shop by category</p>
+          <p class="kicker" style="color:#8a6a12" data-i18n="catsTitle">Acheter par categorie</p>
           <h2>Smart Deals</h2>
         </div>
       </div>
       <div class="grid grid-2">
         <a class="cat-card" href="shop.html?cat=phones">
-          <img src="assets/images/phone-gold.png" alt="Phones">
-          <span><strong data-i18n="phones">Phones</strong><small data-i18n="phonesSub">From flagship to everyday</small></span>
+          <img src="assets/images/phone-gold.webp" alt="Telephones" width="640" height="640" loading="lazy" decoding="async">
+          <span><strong data-i18n="phones">Telephones</strong><small data-i18n="phonesSub">Du haut de gamme au quotidien</small></span>
         </a>
         <a class="cat-card" href="shop.html?cat=laptops">
-          <img src="assets/images/laptop-premium.png" alt="Laptops">
-          <span><strong data-i18n="laptops">Laptops</strong><small data-i18n="laptopsSub">Work, study and create</small></span>
+          <img src="assets/images/laptop-premium.webp" alt="Ordinateurs" width="640" height="640" loading="lazy" decoding="async">
+          <span><strong data-i18n="laptops">Ordinateurs</strong><small data-i18n="laptopsSub">Travail, etudes et creation</small></span>
         </a>
       </div>
     </div>
@@ -50,10 +54,10 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="muted" data-i18n="featuredSub">Hand picked for Douala, Yaounde and beyond</p>
-          <h2 data-i18n="featured">Featured deals</h2>
+          <p class="muted" data-i18n="featuredSub">Selection pour Douala, Yaounde et le reste du pays</p>
+          <h2 data-i18n="featured">Offres du moment</h2>
         </div>
-        <a class="btn btn-outline" href="shop.html" data-i18n="allProducts">All products</a>
+        <a class="btn btn-outline" href="shop.html" data-i18n="allProducts">Tous les produits</a>
       </div>
       <div id="featured-grid" class="grid grid-4"></div>
     </div>
@@ -62,24 +66,24 @@
   <section class="section why">
     <div class="container">
       <div class="section-head">
-        <h2 data-i18n="why">Why Smart Deals</h2>
+        <h2 data-i18n="why">Pourquoi Smart Deals</h2>
       </div>
       <div class="grid grid-4">
         <article class="why-card">
-          <h3 data-i18n="why1">Cameroon delivery</h3>
-          <p data-i18n="why1t">Same city drop in Douala and Yaounde. We ship to Bafoussam, Bamenda, Buea, Limbe, Garoua and more.</p>
+          <h3 data-i18n="why1">Livraison Cameroun</h3>
+          <p data-i18n="why1t">Livraison rapide a Douala et Yaounde. Aussi Bafoussam, Bamenda, Buea, Limbe, Garoua et plus.</p>
         </article>
         <article class="why-card">
-          <h3 data-i18n="why2">Mobile money ready</h3>
-          <p data-i18n="why2t">Pay with MTN MoMo, Orange Money or cash on delivery. Simple and local.</p>
+          <h3 data-i18n="why2">Mobile money</h3>
+          <p data-i18n="why2t">Payez par MTN MoMo, Orange Money ou en especes a la livraison. Simple et local.</p>
         </article>
         <article class="why-card">
-          <h3 data-i18n="why3">Checked devices</h3>
-          <p data-i18n="why3t">Every phone and laptop is tested before it leaves our shop. Warranty on eligible models.</p>
+          <h3 data-i18n="why3">Appareils verifies</h3>
+          <p data-i18n="why3t">Chaque telephone et PC est teste avant depart. Garantie sur les modeles eligibles.</p>
         </article>
         <article class="why-card">
-          <h3 data-i18n="why4">Real support</h3>
-          <p data-i18n="why4t">WhatsApp us in English or French. We answer like neighbours, not a call centre.</p>
+          <h3 data-i18n="why4">Vrai support</h3>
+          <p data-i18n="why4t">WhatsApp en francais ou en anglais. On vous repond comme un voisin, pas un standard.</p>
         </article>
       </div>
     </div>

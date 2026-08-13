@@ -38,6 +38,7 @@ function renderShop() {
   catSelect.options[0].textContent = getLang() === "fr" ? "Tout" : "All";
   catSelect.options[1].textContent = t("phones");
   catSelect.options[2].textContent = t("laptops");
+  brandSelect.options[0].textContent = getLang() === "fr" ? "Tout" : "All";
 
   uniqueBrands(PRODUCTS).forEach(function (brand) {
     const opt = document.createElement("option");
@@ -107,14 +108,14 @@ function renderProduct() {
   const off = discountPercent(product);
   root.innerHTML =
     '<div class="product-layout">' +
-    '<div class="product-media"><img src="' + imgUrl(product.image) + '" alt="' + escapeHtml(product.name) + '"></div>' +
+    '<div class="product-media"><img src="' + imgUrl(product.image) + '" alt="' + escapeHtml(product.name) + '" width="640" height="640" decoding="async"></div>' +
     '<div class="product-info">' +
     '<p class="brand-name">' + escapeHtml(product.brand) + "</p>" +
     "<h1>" + escapeHtml(product.name) + "</h1>" +
     '<p class="stars">' + stars(product.rating) + " " + product.rating + "</p>" +
     '<div class="price-row"><strong>' + formatFcfa(product.price) + "</strong>" +
     (product.oldPrice ? "<s>" + formatFcfa(product.oldPrice) + "</s>" : "") +
-    (off ? '<span class="off" style="position:static">-' + off + "%</span>" : "") +
+    (off ? '<span class="off inline">-' + off + "%</span>" : "") +
     "</div>" +
     "<p>" + escapeHtml(productDesc(product)) + "</p>" +
     '<div class="specs"><span>' + t("storage") + ": " + product.storage + "</span>" +
@@ -170,12 +171,13 @@ function renderCartPage() {
     .map(function (line) {
       return (
         '<div class="cart-line" data-id="' + line.product.id + '">' +
-        '<img src="' + imgUrl(line.product.image) + '" alt="">' +
-        "<div><strong>" + escapeHtml(line.product.name) + "</strong><p class='muted'>" + line.product.brand + "</p></div>" +
+        '<img src="' + imgUrl(line.product.image) + '" alt="" width="88" height="88" loading="lazy" decoding="async">' +
+        '<div class="cart-line-info"><strong>' + escapeHtml(line.product.name) + "</strong><p class='muted'>" + line.product.brand + "</p></div>" +
+        '<div class="cart-line-meta">' +
         '<input type="number" min="1" value="' + line.qty + '">' +
-        "<div>" + formatFcfa(line.lineTotal) + "</div>" +
+        '<div class="line-price">' + formatFcfa(line.lineTotal) + "</div>" +
         '<button class="btn btn-outline" type="button" data-remove="' + line.product.id + '">' + t("remove") + "</button>" +
-        "</div>"
+        "</div></div>"
       );
     })
     .join("");
@@ -212,7 +214,7 @@ function renderCheckout() {
   CITIES.forEach(function (city) {
     const opt = document.createElement("option");
     opt.value = city.id;
-    opt.textContent = city.name;
+    opt.textContent = city.id === "other" && getLang() === "en" ? "Other city" : city.name;
     citySelect.appendChild(opt);
   });
 

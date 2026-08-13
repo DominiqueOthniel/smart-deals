@@ -74,12 +74,12 @@ const I18N = {
     orderOkT: "Thank you. A Smart Deals agent will confirm on WhatsApp or by call. Keep your phone close.",
     backHome: "Back home",
     aboutTitle: "Born in Cameroon. Built for smart buyers.",
-    aboutLead: "Smart Deals is a Douala based shop for people who want genuine phones and laptops without the theatre of inflated prices.",
+    aboutLead: "Smart Deals is based in Akwa, Douala, at Hotel Beau Sejour, 3rd floor, door 302. Genuine phones and laptops, without inflated prices.",
     aboutP1: "We source popular Apple, Samsung, Tecno, Infinix, Xiaomi, HP, Dell, Lenovo and ASUS models, then we check them before they reach you. The golden Africa mark is our promise: African pride, clear prices, respectful service.",
     aboutP2: "Whether you are a student in Buea, a trader in Douala, or a family in Yaounde looking for one solid laptop, we keep the process simple. Browse, add to cart, pay the Cameroon way.",
     contactTitle: "Talk to us",
     contactSub: "English and French. WhatsApp is fastest.",
-    address: "Bonanjo, Douala, Cameroon",
+    address: "Hotel Beau Sejour, Akwa, 3rd floor, door 302, Douala",
     hours: "Mon to Sat, 8:30 to 19:00",
     send: "Send message",
     message: "Message",
@@ -93,7 +93,9 @@ const I18N = {
     remove: "Remove",
     items: "items",
     required: "Please fill every required field.",
-    heroBadge: "New arrivals this week"
+    heroBadge: "New arrivals this week",
+    close: "Close",
+    menu: "Menu"
   },
   fr: {
     brand: "Smart Deals",
@@ -170,12 +172,12 @@ const I18N = {
     orderOkT: "Merci. Un agent Smart Deals confirmera par WhatsApp ou appel. Gardez votre telephone proche.",
     backHome: "Retour accueil",
     aboutTitle: "Ne au Cameroun. Pense pour les acheteurs malins.",
-    aboutLead: "Smart Deals est une boutique basee a Douala pour ceux qui veulent de vrais telephones et PC, sans prix gonfles.",
+    aboutLead: "Smart Deals est a Akwa, Douala, a l Hotel Beau Sejour, 3e niveau, porte 302. De vrais telephones et PC, sans prix gonfles.",
     aboutP1: "Nous selectionnons Apple, Samsung, Tecno, Infinix, Xiaomi, HP, Dell, Lenovo et ASUS, puis nous verifions chaque appareil. Le logo Afrique dore est notre promesse: fierte africaine, prix clairs, service respectueux.",
     aboutP2: "Etudiant a Buea, commercant a Douala ou famille a Yaounde: le parcours reste simple. Parcourir, ajouter au panier, payer a la camerounaise.",
     contactTitle: "Parlez nous",
     contactSub: "Francais et anglais. WhatsApp est le plus rapide.",
-    address: "Bonanjo, Douala, Cameroun",
+    address: "Hotel Beau Sejour, Akwa, 3e niveau, porte 302, Douala",
     hours: "Lun a Sam, 8h30 a 19h00",
     send: "Envoyer",
     message: "Message",
@@ -189,12 +191,14 @@ const I18N = {
     remove: "Retirer",
     items: "articles",
     required: "Merci de remplir tous les champs obligatoires.",
-    heroBadge: "Nouveautes de la semaine"
+    heroBadge: "Nouveautes de la semaine",
+    close: "Fermer",
+    menu: "Menu"
   }
 };
 
 function getLang() {
-  return localStorage.getItem("sd-lang") === "fr" ? "fr" : "en";
+  return localStorage.getItem("sd-lang") === "en" ? "en" : "fr";
 }
 
 function setLang(lang) {
@@ -202,8 +206,8 @@ function setLang(lang) {
 }
 
 function t(key) {
-  const pack = I18N[getLang()] || I18N.en;
-  return pack[key] || I18N.en[key] || key;
+  const pack = I18N[getLang()] || I18N.fr;
+  return pack[key] || I18N.fr[key] || I18N.en[key] || key;
 }
 
 function productDesc(product) {

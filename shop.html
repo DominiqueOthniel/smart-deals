@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | Smart Deals Cameroon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Boutique | Smart Deals Cameroun</title>
   <link rel="icon" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Manrope:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,31 +15,39 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1 data-i18n="allProducts">All products</h1>
-      <p data-i18n="featuredSub">Hand picked for Douala, Yaounde and beyond</p>
+      <h1 data-i18n="allProducts">Tous les produits</h1>
+      <p data-i18n="featuredSub">Selection pour Douala, Yaounde et le reste du pays</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container layout">
       <aside class="filters">
-        <h3 data-i18n="filters">Filters</h3>
-        <label for="cat-filter" data-i18n="category">Category</label>
-        <select id="cat-filter">
-          <option value="all">All</option>
-          <option value="phones">Phones</option>
-          <option value="laptops">Laptops</option>
-        </select>
-        <label for="brand-filter" data-i18n="brand">Brand</label>
-        <select id="brand-filter">
-          <option value="all">All</option>
-        </select>
-        <label for="sort-filter" data-i18n="sort">Sort</label>
-        <select id="sort-filter">
-          <option value="featured" data-i18n="sortFeatured">Featured</option>
-          <option value="low" data-i18n="sortLow">Price: low to high</option>
-          <option value="high" data-i18n="sortHigh">Price: high to low</option>
-        </select>
+        <h3 data-i18n="filters">Filtres</h3>
+        <div class="filter-grid">
+          <div class="filter-field">
+            <label for="cat-filter" data-i18n="category">Categorie</label>
+            <select id="cat-filter">
+              <option value="all">Tout</option>
+              <option value="phones">Telephones</option>
+              <option value="laptops">Ordinateurs</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="brand-filter" data-i18n="brand">Marque</label>
+            <select id="brand-filter">
+              <option value="all">Tout</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="sort-filter" data-i18n="sort">Trier</label>
+            <select id="sort-filter">
+              <option value="featured" data-i18n="sortFeatured">Vedettes</option>
+              <option value="low" data-i18n="sortLow">Prix: croissant</option>
+              <option value="high" data-i18n="sortHigh">Prix: decroissant</option>
+            </select>
+          </div>
+        </div>
       </aside>
       <div>
         <p class="muted" id="result-count"></p>

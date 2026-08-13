@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout | Smart Deals Cameroon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Commande | Smart Deals Cameroun</title>
   <link rel="icon" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Manrope:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,8 +15,8 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1 data-i18n="checkoutTitle">Checkout</h1>
-      <p data-i18n="checkoutSub">We deliver across Cameroon. Confirm your city for delivery fees.</p>
+      <h1 data-i18n="checkoutTitle">Commande</h1>
+      <p data-i18n="checkoutSub">Livraison dans tout le Cameroun. Choisissez votre ville pour les frais.</p>
     </div>
   </section>
 
@@ -21,49 +24,49 @@
     <div class="container checkout-grid">
       <form class="form-card" id="checkout-form">
         <div class="field">
-          <label for="fullName" data-i18n="fullName">Full name</label>
+          <label for="fullName" data-i18n="fullName">Nom complet</label>
           <input id="fullName" name="fullName" required placeholder="Jean Mbarga">
         </div>
         <div class="field">
-          <label for="phone" data-i18n="phone">Phone number</label>
+          <label for="phone" data-i18n="phone">Numero de telephone</label>
           <input id="phone" name="phone" required placeholder="+237 6XX XXX XXX">
         </div>
         <div class="field">
-          <label for="city" data-i18n="city">City</label>
+          <label for="city" data-i18n="city">Ville</label>
           <select id="city" name="city" required></select>
         </div>
         <div class="field">
-          <label for="quarter" data-i18n="quarter">Quarter / neighbourhood</label>
+          <label for="quarter" data-i18n="quarter">Quartier</label>
           <input id="quarter" name="quarter" required placeholder="Akwa, Bastos, Molyko...">
         </div>
         <div class="field">
-          <label for="notes" data-i18n="notes">Delivery notes</label>
+          <label for="notes" data-i18n="notes">Notes de livraison</label>
           <textarea id="notes" name="notes" rows="3"></textarea>
         </div>
         <fieldset class="field">
-          <legend data-i18n="payment">Payment method</legend>
+          <legend data-i18n="payment">Moyen de paiement</legend>
           <div class="pay-options">
             <label><input type="radio" name="pay" value="momo" checked> <span data-i18n="momo">MTN Mobile Money</span></label>
             <label><input type="radio" name="pay" value="orange"> <span data-i18n="orange">Orange Money</span></label>
-            <label><input type="radio" name="pay" value="cod"> <span data-i18n="cod">Cash on delivery</span></label>
+            <label><input type="radio" name="pay" value="cod"> <span data-i18n="cod">Paiement a la livraison</span></label>
           </div>
         </fieldset>
-        <button class="btn btn-gold" type="submit" data-i18n="placeOrder">Place order</button>
+        <button class="btn btn-gold" type="submit" data-i18n="placeOrder">Valider la commande</button>
       </form>
 
       <aside class="summary" id="checkout-summary">
         <h3 data-i18n="total">Total</h3>
-        <p><span data-i18n="subtotal">Subtotal</span><strong id="co-sub"></strong></p>
-        <p><span data-i18n="delivery">Delivery</span><strong id="co-fee"></strong></p>
+        <p><span data-i18n="subtotal">Sous total</span><strong id="co-sub"></strong></p>
+        <p><span data-i18n="delivery">Livraison</span><strong id="co-fee"></strong></p>
         <p><span data-i18n="total">Total</span><strong id="co-total"></strong></p>
       </aside>
     </div>
 
     <div class="success" id="order-success" hidden>
-      <img src="assets/images/logo.png" alt="Smart Deals">
-      <h2 data-i18n="orderOk">Order received</h2>
-      <p data-i18n="orderOkT">Thank you. A Smart Deals agent will confirm on WhatsApp or by call. Keep your phone close.</p>
-      <a class="btn btn-gold" href="index.html" data-i18n="backHome">Back home</a>
+      <img src="assets/images/logo.webp" alt="Smart Deals" width="88" height="88">
+      <h2 data-i18n="orderOk">Commande recue</h2>
+      <p data-i18n="orderOkT">Merci. Un agent Smart Deals confirmera par WhatsApp ou appel. Gardez votre telephone proche.</p>
+      <a class="btn btn-gold" href="index.html" data-i18n="backHome">Retour accueil</a>
     </div>
   </section>
 
