@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Smart Deals Cameroon</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-i18n="allProducts">All products</h1>
+      <p data-i18n="featuredSub">Hand picked for Douala, Yaounde and beyond</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container layout">
+      <aside class="filters">
+        <h3 data-i18n="filters">Filters</h3>
+        <label for="cat-filter" data-i18n="category">Category</label>
+        <select id="cat-filter">
+          <option value="all">All</option>
+          <option value="phones">Phones</option>
+          <option value="laptops">Laptops</option>
+        </select>
+        <label for="brand-filter" data-i18n="brand">Brand</label>
+        <select id="brand-filter">
+          <option value="all">All</option>
+        </select>
+        <label for="sort-filter" data-i18n="sort">Sort</label>
+        <select id="sort-filter">
+          <option value="featured" data-i18n="sortFeatured">Featured</option>
+          <option value="low" data-i18n="sortLow">Price: low to high</option>
+          <option value="high" data-i18n="sortHigh">Price: high to low</option>
+        </select>
+      </aside>
+      <div>
+        <p class="muted" id="result-count"></p>
+        <div id="shop-grid" class="grid grid-3" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script>window.SD_PAGE = "shop.html";</script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("[data-i18n]").forEach(function (node) {
+        node.textContent = t(node.getAttribute("data-i18n"));
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Smart Deals Cameroon</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-i18n="checkoutTitle">Checkout</h1>
+      <p data-i18n="checkoutSub">We deliver across Cameroon. Confirm your city for delivery fees.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container checkout-grid">
+      <form class="form-card" id="checkout-form">
+        <div class="field">
+          <label for="fullName" data-i18n="fullName">Full name</label>
+          <input id="fullName" name="fullName" required placeholder="Jean Mbarga">
+        </div>
+        <div class="field">
+          <label for="phone" data-i18n="phone">Phone number</label>
+          <input id="phone" name="phone" required placeholder="+237 6XX XXX XXX">
+        </div>
+        <div class="field">
+          <label for="city" data-i18n="city">City</label>
+          <select id="city" name="city" required></select>
+        </div>
+        <div class="field">
+          <label for="quarter" data-i18n="quarter">Quarter / neighbourhood</label>
+          <input id="quarter" name="quarter" required placeholder="Akwa, Bastos, Molyko...">
+        </div>
+        <div class="field">
+          <label for="notes" data-i18n="notes">Delivery notes</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <fieldset class="field">
+          <legend data-i18n="payment">Payment method</legend>
+          <div class="pay-options">
+            <label><input type="radio" name="pay" value="momo" checked> <span data-i18n="momo">MTN Mobile Money</span></label>
+            <label><input type="radio" name="pay" value="orange"> <span data-i18n="orange">Orange Money</span></label>
+            <label><input type="radio" name="pay" value="cod"> <span data-i18n="cod">Cash on delivery</span></label>
+          </div>
+        </fieldset>
+        <button class="btn btn-gold" type="submit" data-i18n="placeOrder">Place order</button>
+      </form>
+
+      <aside class="summary" id="checkout-summary">
+        <h3 data-i18n="total">Total</h3>
+        <p><span data-i18n="subtotal">Subtotal</span><strong id="co-sub"></strong></p>
+        <p><span data-i18n="delivery">Delivery</span><strong id="co-fee"></strong></p>
+        <p><span data-i18n="total">Total</span><strong id="co-total"></strong></p>
+      </aside>
+    </div>
+
+    <div class="success" id="order-success" hidden>
+      <img src="assets/images/logo.png" alt="Smart Deals">
+      <h2 data-i18n="orderOk">Order received</h2>
+      <p data-i18n="orderOkT">Thank you. A Smart Deals agent will confirm on WhatsApp or by call. Keep your phone close.</p>
+      <a class="btn btn-gold" href="index.html" data-i18n="backHome">Back home</a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script>window.SD_PAGE = "checkout.html";</script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("[data-i18n]").forEach(function (node) {
+        node.textContent = t(node.getAttribute("data-i18n"));
+      });
+    });
+  </script>
+</body>
+</html>
